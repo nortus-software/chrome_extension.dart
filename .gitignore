@@ -12,3 +12,6 @@ _*
 out
 docs/
 build/
+
+# FVM Version Cache
+.fvm/
