@@ -332,11 +332,13 @@ class ChromeRuntime {
             $js.MessageSender sender,
             JSFunction sendResponse,
           ) {
-            return $c(OnMessageEvent(
+            $c(OnMessageEvent(
               message: message?.dartify(),
               sender: MessageSender.fromJS(sender),
               sendResponse: sendResponse,
             ));
+
+            return true;
           }.toJS);
 
   /// Fired when a message is sent from another extension/app (by
